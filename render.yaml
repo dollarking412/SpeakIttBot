@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: speakit-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python speakit_bot.py
+    envVars:
+      - key: SPEAKIT_BOT_TOKEN
+        sync: false
